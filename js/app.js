@@ -35,7 +35,7 @@ if (answerthree === 'Y' || answerthree === 'YES'){
 let answerfour= prompt('does the sun always come out?').toUpperCase();
 
 if (answerfour === 'Y' || answerfour === 'YES'){
-  alert('you are correct!' + username);
+  alert('you are correct! ' + username);
 }else if(answerfour === 'N' || answerfour === 'NO') {
   alert('sorry, you are incorrect')
 }else{
@@ -49,7 +49,7 @@ if (answerfive === 'Y' || answerfive === 'YES'){
 }else if(answerfive === 'N' || answerfive === 'NO') {
   alert('how rude ' + username)
 }else{
-  alert('did not understand' + username) 
+  alert('did not understand ' + username) 
 }
 
 let tries = 0; 
@@ -62,7 +62,7 @@ while (tries < 4){
   // console.log (typeof anything)
   // console.log(typeof answer6)
 if(anything === 6){
-  alert('Your dope!' + username);
+  alert('Your dope! ' + username);
   break
 
 
@@ -81,12 +81,31 @@ else if (anything < 6){
 
 }
 
-// let attemps =0;
-// let answers = [1,6]; // correct answer answer [0]=1  answer[1]=6
-// let temp =0;
+let foods=["pizza", "chicken", "apple"];
+let attempt=0;
+while (attempt<=6){
+  let answer7 = prompt("guess my favorite food");
+  if (answer7==foods[0]) {
+   alert("you guessed correct");
+   break;
+  } 
+  else if (answer7==foods[1]) {
+    alert("you guessed correct");
+    break;
+    
+    
+  }
+  else if (answer7==foods[2]) {
+    alert("you guessed correct");
+    break;
+   }
+   else{
+     alert('guess again');
+     attempt++;
+   }
 
-// while(attemps < 6){
-
-//   //question
-//   let answer7 = prompt()
-// }
+}
+if(attempt>=6){
+  alert("you are out of guesses");
+  
+}

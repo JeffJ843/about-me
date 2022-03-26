@@ -1,49 +1,78 @@
 'use strict'
 
-let username = prompt('What is your name');
+function askName(){
 
-let answerone = prompt(`Hey! ${username},do i like dogs?` ).toUpperCase();
+  let username = prompt('What is your name');
+}
+function askQ1(){
 
-if (answerone === 'Y' || answerone === 'YES'){
-  alert('you are correct!');
-}else if(answerone === 'N' || answerone === 'NO') {
-  alert('sorry, you are incorrect')
-}else{
-  alert('Oh ok')
+  
+  let answerone = prompt(`Hey! ${username},do i like dogs?` ).toUpperCase();
+  
+  if (answerone === 'Y' || answerone === 'YES'){
+    alert('you are correct!');
+  }else if(answerone === 'N' || answerone === 'NO') {
+    alert('sorry, you are incorrect')
+  }else{
+    alert('Oh ok')
+  }
+
+}
+function askQ2(){
+
+  let answertwo = prompt('Do You see?').toUpperCase();
+  
+  if (answertwo === 'Y' || answertwo === 'YES'){
+    alert('you are correct!');
+  }else if(answerone === 'N' || answerone === 'NO') {
+    alert('sorry, you are incorrect')
+  }else{
+    alert('did not understand')
+  }
 }
 
-let answertwo = prompt('Do You see?').toUpperCase();
+function askQ3(){
 
-if (answertwo === 'Y' || answertwo === 'YES'){
-  alert('you are correct!');
-}else if(answerone === 'N' || answerone === 'NO') {
-  alert('sorry, you are incorrect')
-}else{
-  alert('did not understand')
+  let answerthree = prompt('Are you human by chance').toUpperCase();
+  
+  if (answerthree === 'Y' || answerthree === 'YES'){
+    alert('you are correct!' + username);
+  }else if(answerthree === 'N' || answerthree === 'NO') {
+    alert('sorry, you are incorrect')
+  }else{
+    alert('did not understand')
+  }
 }
 
-let answerthree = prompt('Are you human by chance').toUpperCase();
+function askQ4(){
 
-if (answerthree === 'Y' || answerthree === 'YES'){
-  alert('you are correct!' + username);
-}else if(answerthree === 'N' || answerthree === 'NO') {
-  alert('sorry, you are incorrect')
-}else{
-  alert('did not understand')
+  let answerfour= prompt('does the sun always come out?').toUpperCase();
+  
+  if (answerfour === 'Y' || answerfour === 'YES'){
+    alert('you are correct! ' + username);
+  }else if(answerfour === 'N' || answerfour === 'NO') {
+    alert('sorry, you are incorrect')
+  }else{
+    alert('did not understand')
+  }
 }
 
-let answerfour= prompt('does the sun always come out?').toUpperCase();
+function askQ5(){
 
-if (answerfour === 'Y' || answerfour === 'YES'){
-  alert('you are correct! ' + username);
-}else if(answerfour === 'N' || answerfour === 'NO') {
-  alert('sorry, you are incorrect')
-}else{
-  alert('did not understand')
+  let answerfive = prompt('Had fun? ' ).toUpperCase();
+  
+  if (answerfive === 'Y' || answerfive === 'YES'){
+    alert('Good for you! ' + username);
+  }else if(answerfive === 'N' || answerfive === 'NO') {
+    alert('how rude ' + username)
+  }else{
+    alert('did not understand ' + username) 
+  }
 }
 
-let answerfive = prompt('Had fun? ' ).toUpperCase();
+function askQ6(){
 
+<<<<<<< HEAD
 if (answerfive === 'Y' || answerfive === 'YES'){
   alert('Good for you! ' + username);
 }else if(answerfive === 'N' || answerfive === 'NO') {
@@ -76,36 +105,68 @@ else if (anything < 6){
   tries++
   console.log(tries)
   alert('Sorry answer is too low try again')
+=======
+  let tries = 0; 
+  // let answer6 = prompt("Guess a number between 1-10");
+  let correct_ans= 6;
+  
+  while (tries < 4){
+    let answer6 = prompt("Guess a number between 1-10");
+    let anything =parseInt(answer6)
+    // console.log (typeof anything)
+    // console.log(typeof answer6)
+  if(anything === 6){
+    alert('Your dope! ' + username);
+    break
+  
+  
+  } else if (anything > 6){
+    tries++
+    console.log(tries)
+    alert('Sorry answer is too high try again')
+  }
+  
+  else if (anything < 6){
+    tries++
+    console.log(tries)
+    alert('Sorry answer is too low try again')
+  }
+>>>>>>> refs/remotes/origin/main
 }
 
 
 }
 
-let foods=["pizza", "chicken", "apple"];
-let attempt=0;
-while (attempt<=6){
-  let answer7 = prompt("guess my favorite food");
-  if (answer7==foods[0]) {
-   alert("you guessed correct");
-   break;
-  } 
-  else if (answer7==foods[1]) {
-    alert("you guessed correct");
-    break;
-    
+function askQ7(){
+
+  let foods=["pizza", "chicken", "apple"];
+  let attempt=0;
+  while (attempt<=6){
+    let answer7 = prompt("guess my favorite food");
+    if (answer7==foods[0]) {
+     alert("you guessed correct");
+     break;
+    } 
+    else if (answer7==foods[1]) {
+      alert("you guessed correct");
+      break;
+      
+      
+    }
+    else if (answer7==foods[2]) {
+      alert("you guessed correct");
+      break;
+     }
+     else{
+       alert('guess again');
+       attempt++;
+     }
+  
+  }
+  if(attempt>=6){
+    alert("you are out of guesses");
     
   }
-  else if (answer7==foods[2]) {
-    alert("you guessed correct");
-    break;
-   }
-   else{
-     alert('guess again');
-     attempt++;
-   }
+}
 
-}
-if(attempt>=6){
-  alert("you are out of guesses");
-  
-}
+askName(); askQ1(); askQ2(); askQ3(); askQ4(); askQ5(); askQ6(); askQ7();

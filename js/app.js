@@ -53,7 +53,7 @@ if (answerfive === 'Y' || answerfive === 'YES'){
 }
 
 let tries = 0; 
-// let answer6 = prompt("Guess a number between 1-10");
+let answer6 = prompt("Guess a number between 1-10");
 let correct_ans= 6;
 
 while (tries < 4){
